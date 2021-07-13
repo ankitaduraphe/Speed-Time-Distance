@@ -19,7 +19,7 @@ shinyServer(function(input, output) {
         input$action_Calc
         values$int <- isolate({
             input$num_time * recode(input$select_time, "1 = '3600'; 2 = '60'; 3 = '1'") * 
-                input$slider_speed * recode(input$select_time, "1 = '0.277777778'; 2 = '1'")
+                input$slider_speed * recode(input$select_speed, "1 = '0.277777778'; 2 = '1'")
         })
     })
     
